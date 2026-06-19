@@ -1,9 +1,9 @@
-=== SimpleSES for Wordpress ===
+=== SimpleSES ===
 
 Contributors: daninger4995
-Tags: smtp, amazon ses, ses, email, mail
+Tags: smtp, amazon ses, email, mailer
 Requires at least: 5.5
-Tested up to: 6.5
+Tested up to: 6.8
 Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPLv3 or later
@@ -16,6 +16,8 @@ A lightweight plugin that sends all WordPress email through Amazon SES using pla
 SimpleSES reconfigures the WordPress `wp_mail()` function to deliver email through **Amazon SES** using your SES **SMTP credentials**. It hooks into `phpmailer_init` and points PHPMailer at the SES SMTP endpoint for your region.
 
 This plugin does one thing only. There are no other mailer integrations, no onboarding wizards, no usage tracking, no email logging, and no upsells.
+
+SimpleSES is an independent project and is not affiliated with, endorsed by, or sponsored by Amazon Web Services. "Amazon SES" and "Amazon Web Services" are trademarks of Amazon.com, Inc. or its affiliates.
 
 = Features =
 
