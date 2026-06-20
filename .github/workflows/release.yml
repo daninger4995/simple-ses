@@ -1,7 +1,7 @@
 name: Build release zip
 
 # Builds the installable plugin zip and attaches it to a GitHub Release
-# whenever a version tag (e.g. v1.0.0) is pushed.
+# whenever a version tag (e.g. v1.1.0) is pushed.
 
 on:
   push:
@@ -18,17 +18,17 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v4
 
-      - name: Stage plugin files in a simple-ses/ folder
+      - name: Stage plugin files in the slug folder
         run: |
-          mkdir -p build/simple-ses
-          cp simple-ses.php readme.txt uninstall.php LICENSE build/simple-ses/
+          mkdir -p build/daningers-smtp-for-amazon-ses
+          cp daningers-smtp-for-amazon-ses.php readme.txt uninstall.php LICENSE build/daningers-smtp-for-amazon-ses/
 
-      - name: Create simple-ses.zip
+      - name: Create the plugin zip
         run: |
           cd build
-          zip -r ../simple-ses.zip simple-ses
+          zip -r ../daningers-smtp-for-amazon-ses.zip daningers-smtp-for-amazon-ses
 
       - name: Attach zip to the release
         uses: softprops/action-gh-release@v2
         with:
-          files: simple-ses.zip
+          files: daningers-smtp-for-amazon-ses.zip
